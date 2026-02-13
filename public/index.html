@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Realtime Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <!-- LEFT SIDE (GAME AREA) -->
+        <div class="main">
+
+            <h1>Realtime Quiz</h1>
+
+            <!-- JOIN PANEL -->
+            <div id="joinPanel" class="join">
+                <input id="nameInput" placeholder="Enter your name">
+                <button id="joinBtn">Join Game</button>
+            </div>
+
+            <!-- CONNECTION STATUS -->
+            <div id="status" class="status connecting">
+                Not connected
+            </div>
+
+            <!-- IDENTITY -->
+            <div id="identity" class="identity" style="display:none">
+                <div><b>Name:</b> <span id="playerName"></span></div>
+                <div><b>ID:</b> <span id="playerId"></span></div>
+            </div>
+
+            <hr>
+
+            <!-- QUIZ -->
+            <div id="quiz" class="quiz">
+                Waiting for question...
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT SIDE (LEADERBOARD PANEL) -->
+        <div class="side">
+            <h2>Leaderboard</h2>
+            <div id="leaderboard" class="leaderboard"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="client.js"></script>
+
+</body>
+</html>

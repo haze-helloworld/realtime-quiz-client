@@ -1,0 +1,216 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary: #4f46e5;
+    --primary-dark: #3730a3;
+    --success: #16a34a;
+    --danger: #dc2626;
+    --card: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Page background */
+body {
+    background: linear-gradient(135deg, #4f46e5, #9333ea);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 60px;
+}
+
+/* Container width */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    padding: 20px;
+}
+
+/* Main card layout */
+.card {
+    background: var(--card);
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(260px, 1fr);
+    gap: 35px;
+}
+
+/* Left column spacing */
+.main > * {
+    margin-bottom: 14px;
+}
+
+.main hr {
+    margin: 16px 0;
+}
+
+/* Right panel */
+.side {
+    background: #fafbff;
+    border-radius: 14px;
+    padding: 18px;
+    border: 1px solid #e5e7eb;
+    height: fit-content;
+}
+
+/* Title */
+h1 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+/* Status badge */
+.status {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.connecting { background: #fef3c7; color: #92400e; }
+.connected  { background: #dcfce7; color: #166534; }
+.disconnected { background: #fee2e2; color: #991b1b; }
+
+/* Join panel */
+.join {
+    display: flex;
+    gap: 10px;
+    justify-content: left;
+}
+
+.join input {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    width: 65%;
+}
+
+.join button {
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: none;
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.join button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* Identity */
+.identity {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* Quiz */
+.quiz { min-height: 120px; }
+
+.question {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #111827;
+}
+
+/* Options grid */
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+/* Buttons */
+.option {
+    padding: 16px;
+    font-size: 17px;
+    border-radius: 14px;
+    border: none;
+    background: #eef2ff;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.option:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.option:active { transform: scale(0.97); }
+
+/* Result banner */
+.result {
+    margin-top: 20px;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.win  { background: #dcfce7; color: #166534; }
+.lose { background: #fee2e2; color: #991b1b; }
+
+/* Leaderboard */
+.side h2 {
+    margin-bottom: 14px;
+    text-align: left;
+    color: var(--primary);
+}
+
+.leaderboard {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.player {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    background: #f3f4ff;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #e0e7ff;
+}
+
+.player span:last-child {
+    font-weight: 700;
+    color: var(--primary);
+    min-width: 22px;
+    text-align: right;
+}
+
+/* Highlight current user */
+.player.you {
+    background: #dcfce7;
+    border-color: #86efac;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .card {
+        grid-template-columns: 1fr;
+    }
+
+    .side {
+        border-top: 1px solid #e5e7eb;
+    }
+}
