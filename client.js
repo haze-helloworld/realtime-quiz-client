@@ -1,8 +1,6 @@
 /* ================= SERVER URL ================= */
 /* change after deploy */
-const SERVER_URL = window.location.hostname === "localhost"
-    ? undefined
-    : "https://YOUR-RENDER-URL.onrender.com";
+const SERVER_URL = "https://realtime-quiz-server-m309.onrender.com";
 
 let socket = null;
 
